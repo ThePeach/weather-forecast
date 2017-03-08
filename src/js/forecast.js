@@ -1,7 +1,7 @@
 // This specific module deals with the data that is received by Open Weather Map
 
 const FORECAST = (function () {
-  const days = []
+  let days = []
   function Day () {
     this.date = null // unix timestamp
     this.temp = {
@@ -59,6 +59,10 @@ const FORECAST = (function () {
   function parseData (data) {
     let prevDay = null
 
+    if (!data || !data.list || data.list.constructor !== Array) {
+      return []
+    }
+
     for (let i = 0; i < data.list.length; i++) {
       let currDay
       let currDate = new Date(data.list[i].dt * 1000)
@@ -78,7 +82,16 @@ const FORECAST = (function () {
     return days
   }
 
+  function reset () {
+    days = []
+  }
+
   return {
-    parse: parseData
+    parse: parseData,
+    reset: reset
   }
 })()
+
+if (module.exports) {
+  module.exports = FORECAST
+}

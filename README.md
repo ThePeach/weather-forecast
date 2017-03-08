@@ -8,7 +8,7 @@ The project is available online at the following address:
 
 ## What has been done here?
 
-Tried to be as much pedantic as possible in following the 4 hours time limit given.
+Tried to be as strict as possible in following the 4 hours time limit given.
 
 I had given myself an entire afternoon to complete this task, but I had to take multiple breaks in between for various reasons.
 
