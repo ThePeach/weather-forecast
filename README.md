@@ -2,6 +2,10 @@
 
 A small UX/UI experiment for a 5 days weather forecast page
 
+The project is available online at the following address:
+
+[https://thepeach.github.io/weather-forecast/](https://thepeach.github.io/weather-forecast/)
+
 ## What has been done here?
 
 Tried to be as much pedantic as possible in following the 4 hours time limit given.
