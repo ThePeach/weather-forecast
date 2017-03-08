@@ -17,13 +17,13 @@ function injectData (element, data) {
     return false
   }
 
-  let WeekDay = element.querySelector('.w-forecast_day-text')
+  const WeekDay = element.querySelector('.w-forecast_day-text')
   WeekDay.innerHTML = weekDaysAbbr[data.date.getDay()]
 
-  let TempMax = element.querySelector('.w-forecast_temp--max')
+  const TempMax = element.querySelector('.w-forecast_temp--max')
   TempMax.innerHTML = `${parseInt(data.temp.max, 10)}&deg;C`
 
-  let TempMin = element.querySelector('.w-forecast_temp--min')
+  const TempMin = element.querySelector('.w-forecast_temp--min')
   TempMin.innerHTML = `${parseInt(data.temp.min, 10)}&deg;C`
 }
 
