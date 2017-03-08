@@ -4,7 +4,9 @@ A small UX/UI experiment for a 5 days weather forecast page
 
 The project is available online at the following address:
 
-[https://thepeach.github.io/weather-forecast/](https://thepeach.github.io/weather-forecast/)
+[https://thepeach.github.io/weather-forecast/](http://private.smartart.it/build/)
+
+*NOTE*: due to Open Weather Map not supporting requests over HTTPS, I've had to move the hosting over to my personal space instead of using GitHub.
 
 ## What has been done here?
 
