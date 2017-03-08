@@ -55,6 +55,11 @@ const FORECAST = (function () {
     this.cloudCoverage.timed.push(data.clouds.all)
     this.precipitation.timed.push(data.rain['3h'] || 0)
   }
+  Day.prototype.getShortWeek = function getShortWeek () {
+    const weekDaysAbbr = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
+    // this needs to cater for current locale, defaults to client locale (assuming UTC)
+    return weekDaysAbbr[this.date.getDay()]
+  }
 
   function parseData (data) {
     let prevDay = null

@@ -11,14 +11,12 @@ function init (data) {
 }
 
 function injectData (element, data) {
-  const weekDaysAbbr = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
-
   if (element === undefined) {
     return false
   }
 
   const WeekDay = element.querySelector('.w-forecast_day-text')
-  WeekDay.innerHTML = weekDaysAbbr[data.date.getDay()]
+  WeekDay.innerHTML = data.getShortWeek()
 
   const TempMax = element.querySelector('.w-forecast_temp--max')
   TempMax.innerHTML = `${parseInt(data.temp.max, 10)}&deg;C`
