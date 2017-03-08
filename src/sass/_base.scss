@@ -1,0 +1,22 @@
+body {
+  background-color: $color-t2-light;
+  margin: 0;
+}
+
+h1 {
+  color: $color-t3;
+  margin: 0;  
+}
+
+h2 {
+  margin-top: 0;
+  color: $color-t4;
+}
+
+a {
+  color: $color-t1;
+
+  &:hover {
+    color: $color-t2;
+  }
+}

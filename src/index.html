@@ -4,10 +4,10 @@
     <title>London Weather Forecast - 5 days view</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
   </head>
   <body>
-    <header>
+    <header class="header-main">
       <h1>London Weather Forecast</h1>
       <h2>5 days view</h2>
     </header>
@@ -16,11 +16,11 @@
         <li class="w-forecast_day" id="day1">
           <h2 class="w-forecast_day-text"><time datetime="2017-03-08">Wed</time></h2>
           <dl class="w-forecast_temp">
-            <dt>Max:</dt><dd>14&deg;C</dd>
-            <dt>Min:</dt><dd>13&deg;C</dd>
+            <dt>Max:</dt><dd class="w-forecast_temp--max">14&deg;C</dd>
+            <dt>Min:</dt><dd class="w-forecast_temp--min">13&deg;C</dd>
           </dl>
           <dl class="w-forecast_wind">
-            <dt>Speed</dt><dd>3.77m/s</dd>
+            <dt>Wind Speed</dt><dd>3.77m/s</dd>
             <dt>Direction</dt><dd>NNW</dd>
           </dl>
           <dl class="w-forecast_clouds">
@@ -105,7 +105,7 @@
         </li>
       </ul>
     </main>
-    <footer>
+    <footer class="footer-main">
       <p class="disclaimer">
         API endpoint gently provided by <a href="https://openweathermap.org" title="Open Weather Map">Open Weather Map</a>.
       </p>

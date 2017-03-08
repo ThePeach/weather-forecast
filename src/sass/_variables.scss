@@ -1,0 +1,35 @@
+$susy: (
+  columns: 4,  // The number of columns in your grid
+  gutters: 1/4, // The size of a gutter in relation to a single column
+);
+
+$tablet-up: (
+  flow: ltr,
+  math: fluid,
+  output: float,
+  gutter-position: after,
+  container: auto,
+  container-position: center,
+  columns: 12,
+  gutters: .25,
+  column-width: false,
+  global-box-sizing: content-box,
+  last-flow: to
+);
+
+// colors
+$base-font-color: #000000;
+$base-font-color-lighter: #5d5d5d;
+
+// six tones palette
+$color-t1: #B6B054;
+$color-t2: #8DB34D;
+$color-t3: #49578A;
+$color-t4: #634F94;
+$color-t5: #B65A54;
+$color-t6: #B67354;
+
+// three color light tones
+$color-t2-light: #FDFEFC;
+$color-t4-light: #ECE9F4;
+$color-t6-light: #FFFFFF;

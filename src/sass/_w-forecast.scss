@@ -1,0 +1,45 @@
+.w-forecast {
+  @include container;
+  margin: 0;
+  padding: 0;
+  
+  &_day {
+    @include span(2 of 10);
+    background-color: $color-t4-light;
+    list-style-type: none;
+    position: relative;
+
+    &:nth-child(5) {
+      @include span(last 2 of 10);
+    }
+  }
+  
+  &_day-text {
+    color: $color-t5;
+  }
+
+  &_temp {
+    @include container(50%);
+    margin-top: .2em;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    color: $color-t6;
+    text-align: center;
+
+    > * {
+      @include span(2 of 2);
+      margin-left: 0;
+    }
+
+    > *:nth-child(2n + 1) {
+      display: none;
+    }
+
+    &--max {
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+  }
+}

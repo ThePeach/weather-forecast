@@ -1,0 +1,6 @@
+.footer-main {
+  @include container;
+  font-size: .9em;
+  text-align: center;
+  color: $base-font-color-lighter;
+}
