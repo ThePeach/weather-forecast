@@ -7,8 +7,16 @@
     "doc": "docs"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "serve": "gulp serve"
+  },
+  "jest": {
+    "roots": [
+      "test/unit"
+    ],
+    "testRegex": "/*.js$",
+    "collectCoverage": true,
+    "coverageDirectory": "coverage"
   },
   "repository": {
     "type": "git",
@@ -32,6 +40,7 @@
     "gulp-postcss": "^6.3.0",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.4.1",
+    "jest": "^19.0.2",
     "precss": "^1.4.0",
     "susy": "^2.2.12"
   }
