@@ -9,7 +9,16 @@ const FORECAST = (function () {
       min: null
     }
     this.wind = {
-      speed: null,
+      speed: {
+        avg: function () {
+          let total = 0
+          for (let i = 0; i < this.timed.length; i++) {
+            total += this.timed[i]
+          }
+          return total / this.timed.length
+        },
+        timed: []
+      },
       direction: {
         degrees: null,
         abbr: null
@@ -18,20 +27,20 @@ const FORECAST = (function () {
     this.cloudCoverage = {
       avg: function () {
         let total = 0
-        for (let i = 0; i < this.cloudCoverage.timed.length; i++) {
-          total += this.cloudCoverage.timed[i]
+        for (let i = 0; i < this.timed.length; i++) {
+          total += this.timed[i]
         }
-        return total / this.cloudCoverage.timed.length
+        return total / this.timed.length
       },
       timed: []
     }
     this.precipitation = {
       avg: function () {
         let total = 0
-        for (let i = 0; i < this.precipitation.timed.length; i++) {
-          total += this.precipitation.timed[i]
+        for (let i = 0; i < this.timed.length; i++) {
+          total += this.timed[i]
         }
-        return total / this.precipitation.timed.length
+        return total / this.timed.length
       },
       timed: []
     }
@@ -40,7 +49,7 @@ const FORECAST = (function () {
     this.date = new Date(data.dt * 1000)
     this.temp.max = data.main.temp_max
     this.temp.min = data.main.temp_min
-    this.wind.speed = data.wind.speed
+    this.wind.speed.timed.push(data.wind.speed)
     this.wind.direction.degrees = data.wind.deg
     this.cloudCoverage.timed.push(data.clouds.all)
     this.precipitation.timed.push(data.rain['3h'] || 0)
@@ -52,6 +61,7 @@ const FORECAST = (function () {
     if (this.temp.min > data.main.temp_min) {
       this.temp.min = data.main.temp_min
     }
+    this.wind.speed.timed.push(data.wind.speed)
     this.cloudCoverage.timed.push(data.clouds.all)
     this.precipitation.timed.push(data.rain['3h'] || 0)
   }
@@ -97,6 +107,6 @@ const FORECAST = (function () {
   }
 })()
 
-if (module.exports) {
+if (typeof module !== 'undefined' && module.exports) {
   module.exports = FORECAST
 }
