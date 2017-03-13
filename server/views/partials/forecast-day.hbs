@@ -1,0 +1,16 @@
+<h2 class="w-forecast_day-text"><time datetime="2017-03-08">{{getShortWeek}}</time></h2>
+<dl class="w-forecast_temp">
+  <dt>Max:</dt><dd class="w-forecast_temp--max">{{temp.max}}&deg;C</dd>
+  <dt>Min:</dt><dd class="w-forecast_temp--min">{{temp.min}}&deg;C</dd>
+</dl>
+<dl class="w-forecast_wind">
+  <dt>Wind Speed</dt><dd class="w-forecast_wind--speed">{{wind.speed.avg}}m/s</dd>
+  <dt>Direction</dt><dd class="w-forecast_wind--dir">{{wind.direction.degrees}}</dd>
+</dl>
+<dl class="w-forecast_clouds">
+  <dt>Cloud Coverage</dt><dd class="w-forecast_clouds--cover">{{cloudCoverage.avg}}%</dd>
+</dl>
+<dl class="w-forecast_precip">
+  <dt>Rain</dt>
+  <dd class="w-forecast_precip--qt">{{precipitation.avg}}mm</dd>
+</dl>
